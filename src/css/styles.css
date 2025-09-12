@@ -196,7 +196,24 @@ body {
 
 /* About Section */
 .about-section {
-    background-color: var(--color-bg-subtle);
+    background: linear-gradient(to bottom, var(--color-bg-subtle) 0%, var(--color-bg-subtle) 100%);
+    position: relative;
+}
+
+.about-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background: linear-gradient(to bottom, var(--color-bg) 0%, var(--color-bg-subtle) 100%);
+    z-index: 1;
+}
+
+.about-section .container {
+    position: relative;
+    z-index: 2;
 }
 
 /* Skills Section */
@@ -378,7 +395,24 @@ body {
 
 /* Experience Section */
 .experience-section {
-    background-color: var(--color-bg-subtle);
+    background: linear-gradient(to bottom, var(--color-bg-subtle) 0%, var(--color-bg-subtle) 100%);
+    position: relative;
+}
+
+.experience-section::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background: linear-gradient(to bottom, var(--color-bg-subtle) 0%, var(--color-bg) 100%);
+    z-index: 1;
+}
+
+.experience-section .container {
+    position: relative;
+    z-index: 2;
 }
 
 /* Vertical Timeline - Matching timeline.jpg */
