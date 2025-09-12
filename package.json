@@ -1,0 +1,41 @@
+{
+  "name": "hire-me-portfolio",
+  "version": "1.0.0",
+  "description": "Professional portfolio website showcasing full-stack development expertise",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve -s . -p 3000",
+    "dev": "npx serve -s . -p 3000 --live",
+    "build": "echo 'Static site - no build required'",
+    "test": "echo 'Tests will be added in future iterations'",
+    "lint": "npx eslint src/js/**/*.js",
+    "format": "npx prettier --write src/**/*.{js,css,html}",
+    "validate": "npx html-validate index.html",
+    "deploy": "gh-pages -d ."
+  },
+  "keywords": [
+    "portfolio",
+    "resume",
+    "full-stack",
+    "javascript",
+    "bootstrap",
+    "responsive"
+  ],
+  "author": "Vamsi",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "prettier": "^3.2.5",
+    "html-validate": "^8.9.1",
+    "gh-pages": "^6.1.1",
+    "serve": "^14.2.1"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/username/hire-me.git"
+  },
+  "homepage": "https://username.github.io/hire-me"
+}
