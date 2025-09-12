@@ -4,7 +4,7 @@
         'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     --font-family-mono:
         'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
-    --font-size-base: 1rem;
+    --font-size-base: 1.125rem;
     --line-height-base: 1.6;
 
     /* Colors - Light Mode */
@@ -50,10 +50,12 @@
 /* Dark Mode */
 [data-bs-theme='dark'] {
     --color-text: #f0f6fc;
-    --color-text-muted: #8b949e;
+    --color-text-muted: #b1bac4;
     --color-bg: #0d1117;
     --color-bg-subtle: #161b22;
     --color-border: #30363d;
+    --bs-primary: #4a9eff;
+    --bs-primary-rgb: 74, 158, 255;
 
     --bs-body-color: var(--color-text);
     --bs-body-bg: var(--color-bg);
@@ -63,6 +65,7 @@
 /* Base Styles */
 body {
     font-family: var(--font-family-sans-serif);
+    font-size: var(--font-size-base);
     line-height: var(--line-height-base);
     scroll-behavior: smooth;
     padding-top: 0;
@@ -178,7 +181,7 @@ body {
 
 .hero-description {
     color: var(--color-text-muted);
-    font-size: 1.1rem;
+    font-size: 1.25rem;
 }
 
 .hero-actions .btn {
@@ -274,7 +277,7 @@ body {
 }
 
 .skill-badge {
-    font-size: 0.875rem;
+    font-size: 0.975rem;
     font-weight: 500;
     padding: 0.5rem 1rem;
     border-radius: var(--border-radius-sm);
@@ -294,6 +297,17 @@ body {
     justify-content: center;
 }
 
+.skills-section-home .skill-category-compact {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all var(--transition-fast);
+}
+
+.skills-section-home .skill-category-compact:hover {
+    transform: translateX(8px);
+    opacity: 1;
+}
+
 /* Skills Section for Career */
 .skills-section-career {
     position: relative;
@@ -302,6 +316,17 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+}
+
+.skills-section-career .skill-category-compact {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all var(--transition-fast);
+}
+
+.skills-section-career .skill-category-compact:hover {
+    transform: translateX(8px);
+    opacity: 1;
 }
 
 .skills-section-career::before {
@@ -327,15 +352,115 @@ body {
 }
 
 .skill-category-compact {
-    margin-bottom: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+    transition: all var(--transition-fast);
+    padding-left: 0;
+    padding-bottom: var(--spacing-md);
+    position: relative;
+}
+
+.skill-category-compact:hover {
+    transform: translateX(8px);
+}
+
+/* Enhanced Skill Separators */
+.skill-category-compact:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        var(--color-border) 20%,
+        var(--color-border) 80%,
+        transparent 100%
+    );
+    opacity: 0.6;
+    transition: opacity var(--transition-fast);
+}
+
+.skill-category-compact:hover::after {
+    opacity: 0;
+}
+
+/* Alternative separator styles - Dot pattern */
+.skills-section-home .skill-category-compact:not(:last-child)::after {
+    background: none;
+    height: auto;
+    text-align: center;
+    color: var(--color-text-muted);
+    font-size: 0.5rem;
+    opacity: 0.4;
+    padding: 0.5rem 0;
+    line-height: 1;
+    content: '• • •';
+}
+
+/* Technical Skills section gets a more subtle separator */
+.skills-section-career .skill-category-compact:not(:last-child)::after {
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(var(--bs-primary-rgb), 0.15) 50%,
+        transparent 100%
+    );
+    content: '';
+    opacity: 0.8;
+}
+
+/* Animated separator on hover */
+.skills-section-career .skill-category-compact:hover::after {
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(var(--bs-primary-rgb), 0.3) 50%,
+        transparent 100%
+    );
+    opacity: 1;
+}
+
+/* Arrow Icon Styles */
+.skill-arrow-icon {
+    font-size: 0.85rem;
+    margin-right: 0.6rem;
+    color: var(--color-text-muted);
+    transition: all var(--transition-fast);
+    opacity: 0.7;
+    display: inline-block;
+    width: 1rem;
+}
+
+.skill-category-compact:hover .skill-arrow-icon {
+    color: var(--bs-primary);
+    opacity: 1;
+    transform: translateX(3px);
+}
+
+/* Inline Skill Icon Styles for Technical Skills */
+.skill-icon-inline {
+    font-size: 0.95rem;
+    margin-right: 0.5rem;
+    transition: all var(--transition-fast);
+    display: inline-block;
+}
+
+.skill-category-compact:hover .skill-icon-inline {
+    transform: scale(1.1);
 }
 
 .skill-category-title-small {
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    line-height: 1;
 }
 
 .skills-list,
@@ -343,25 +468,56 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 0.375rem;
+    align-items: flex-start;
+}
+
+/* Tech Stack section (with arrows) gets indented */
+.skills-section-home .skills-list {
+    margin-left: 1.6rem;
+}
+
+/* Technical Skills section (with inline icons) - no extra margin */
+.skills-section-career .skills-list-compact {
+    margin-left: 0;
 }
 
 .skill-tag-compact {
     font-size: 0.75rem;
-    font-weight: 500;
-    padding: 0.25rem 0.5rem;
-    background-color: var(--color-bg-subtle);
-    border: 1px solid var(--color-border);
-    border-radius: var(--border-radius-sm);
+    font-weight: 400;
+    padding: 0.25rem 0.6rem;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
     color: var(--color-text-muted);
     transition: all var(--transition-fast);
     white-space: nowrap;
+    position: relative;
+    margin-right: 0.75rem;
+    margin-bottom: 0.4rem;
+    display: inline-block;
+    line-height: 1.2;
+}
+
+.skill-tag-compact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, var(--bs-primary), transparent);
+    opacity: 0;
+    transition: opacity var(--transition-fast);
+    z-index: -1;
 }
 
 .skill-tag-compact:hover {
-    background-color: var(--bs-primary);
-    color: white;
-    border-color: var(--bs-primary);
-    transform: scale(1.05);
+    color: var(--color-text);
+    transform: none;
+}
+
+.skill-tag-compact:hover::before {
+    opacity: 0.1;
 }
 
 /* Metrics Section */
@@ -426,7 +582,7 @@ body {
 .experience-timeline-vertical::before {
     content: '';
     position: absolute;
-    left: 150px;
+    left: 161px; /* 130px (date width) + 24px (padding) + 7px (half marker width) */
     top: 20px;
     bottom: 20px;
     width: 2px;
@@ -437,7 +593,7 @@ body {
 .timeline-item-vertical {
     position: relative;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     margin-bottom: var(--spacing-xl);
     padding-bottom: var(--spacing-md);
 }
@@ -449,13 +605,17 @@ body {
 .timeline-date-left {
     width: 130px;
     text-align: right;
-    padding-right: var(--spacing-md);
-    font-size: 0.95rem;
+    padding-right: 24px; /* Exact spacing to marker */
+    font-size: 1rem;
     font-weight: 600;
     color: var(--color-text);
     font-family: var(--font-family-mono);
     flex-shrink: 0;
-    padding-top: 0.25rem;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 14px; /* Match marker height */
 }
 
 .timeline-marker {
@@ -464,7 +624,7 @@ body {
     height: 14px;
     background-color: var(--bs-primary);
     border-radius: 50%;
-    margin: 0.4rem 0;
+    margin: 0;
     z-index: 2;
     flex-shrink: 0;
     box-shadow: 0 0 0 4px var(--color-bg-subtle);
@@ -477,20 +637,20 @@ body {
 }
 
 .company-name {
-    font-size: 1.25rem;
+    font-size: 1.375rem;
     font-weight: 600;
     color: var(--color-text);
     margin-bottom: 0.25rem;
 }
 
 .position-title {
-    font-size: 1rem;
+    font-size: 1.125rem;
     font-weight: 400;
     margin-bottom: var(--spacing-sm);
 }
 
 .position-description {
-    font-size: 0.95rem;
+    font-size: 1.05rem;
     line-height: 1.6;
     margin-bottom: 0;
 }
@@ -632,7 +792,143 @@ body {
 
 .btn-lg {
     padding: 1rem 2rem;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+}
+
+/* Apple-Inspired Button Styles */
+.btn-apple {
+    font-family: var(--font-family-sans-serif);
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 1.2;
+    padding: 0.875rem 1.5rem;
+    border-radius: 980px; /* Apple's signature pill shape */
+    border: none;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.btn-apple i {
+    font-size: 0.975rem;
+    margin-right: 0.5rem;
+}
+
+/* Primary Apple Button (Blue) */
+.btn-apple-primary {
+    background: linear-gradient(135deg, #007aff 0%, #0051d2 100%);
+    color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 
+                0 1px 2px rgba(0, 0, 0, 0.24),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.btn-apple-primary:hover {
+    background: linear-gradient(135deg, #0056cc 0%, #003d99 100%);
+    color: #ffffff;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 122, 255, 0.25),
+                0 2px 4px rgba(0, 0, 0, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+.btn-apple-primary:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
+                0 1px 2px rgba(0, 0, 0, 0.24),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+/* Secondary Apple Button (Light) */
+.btn-apple-secondary {
+    background: rgba(var(--color-text-rgb, 30, 41, 59), 0.05);
+    color: var(--color-text);
+    border: 1px solid rgba(var(--color-text-rgb, 30, 41, 59), 0.1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.btn-apple-secondary:hover {
+    background: rgba(var(--color-text-rgb, 30, 41, 59), 0.08);
+    color: var(--color-text);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(var(--color-text-rgb, 30, 41, 59), 0.15),
+                0 2px 4px rgba(0, 0, 0, 0.08),
+                inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.btn-apple-secondary:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Dark mode adjustments */
+[data-bs-theme='dark'] .btn-apple-secondary {
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--color-text);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+[data-bs-theme='dark'] .btn-apple-secondary:hover {
+    background: rgba(255, 255, 255, 0.12);
+    color: var(--color-text);
+}
+
+/* Minimal Button Styles */
+.btn-minimal {
+    font-weight: 400;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background: transparent;
+    color: var(--color-text-muted);
+    transition: all var(--transition-normal);
+    position: relative;
+    overflow: visible;
+    text-decoration: none;
+}
+
+.btn-minimal:hover {
+    color: var(--color-text);
+    transform: none;
+    box-shadow: none;
+}
+
+.btn-minimal-primary {
+    border-bottom-color: var(--bs-primary);
+}
+
+.btn-minimal-primary:hover {
+    color: var(--bs-primary);
+    border-bottom-color: var(--bs-primary);
+}
+
+.btn-minimal-secondary {
+    border-bottom-color: var(--color-text-muted);
+}
+
+.btn-minimal-secondary:hover {
+    color: var(--color-text);
+    border-bottom-color: var(--color-text);
+}
+
+.btn-minimal i {
+    font-size: 0.8rem;
+    opacity: 0.7;
+    transition: opacity var(--transition-fast);
+}
+
+.btn-minimal:hover i {
+    opacity: 1;
 }
 
 /* Section Spacing */
@@ -649,7 +945,7 @@ section {
 @media (max-width: 768px) {
 
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 2.75rem;
     }
 
     .hero-actions {
@@ -660,6 +956,18 @@ section {
     .hero-actions .btn {
         width: 100%;
         max-width: 300px;
+    }
+    
+    .btn-minimal {
+        text-align: center;
+        padding: 0.75rem 1rem;
+    }
+    
+    .btn-apple {
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+        justify-content: center;
     }
 
     section {
@@ -682,7 +990,7 @@ section {
         text-align: left;
         padding-right: 0;
         padding-bottom: 0.5rem;
-        font-size: 0.85rem;
+        font-size: 0.9rem;
     }
     
     .timeline-marker {
@@ -715,15 +1023,20 @@ section {
         padding-left: 0;
         margin-top: var(--spacing-lg);
     }
+    
+    /* Hide separators on mobile for cleaner look */
+    .skill-category-compact:not(:last-child)::after {
+        display: none;
+    }
 }
 
 @media (max-width: 576px) {
     .hero-title {
-        font-size: 2rem;
+        font-size: 2.25rem;
     }
 
     .section-title {
-        font-size: 1.5rem;
+        font-size: 1.75rem;
     }
 
     .project-card {
@@ -757,6 +1070,17 @@ section {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
     }
 }
 
