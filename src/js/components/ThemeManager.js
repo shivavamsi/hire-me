@@ -37,15 +37,32 @@ export class ThemeManager {
                 e.preventDefault();
                 this.toggleTheme();
             });
-
         }
 
+        // Listen for system theme changes
+        if (this.mediaQuery) {
+            this.mediaQuery.addEventListener('change', (e) => {
+                // Only auto-switch if user hasn't manually set a preference
+                const saved = localStorage.getItem(this.storageKey);
+                if (!saved) {
+                    this.currentTheme = e.matches ? this.themes.DARK : this.themes.LIGHT;
+                    this.applyTheme();
+                }
+            });
+        }
     }
 
     loadSavedTheme() {
         const saved = localStorage.getItem(this.storageKey);
         if (saved && Object.values(this.themes).includes(saved)) {
             this.currentTheme = saved;
+        } else {
+            // Auto-detect system preference if no saved theme
+            if (this.mediaQuery && this.mediaQuery.matches) {
+                this.currentTheme = this.themes.DARK;
+            } else {
+                this.currentTheme = this.themes.LIGHT;
+            }
         }
     }
 
