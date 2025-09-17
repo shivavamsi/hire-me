@@ -571,69 +571,78 @@ body {
     z-index: 2;
 }
 
-/* Vertical Timeline - Matching timeline.jpg */
+/* Vertical Timeline - Minimalist Design */
 .experience-timeline-vertical {
     position: relative;
-    max-width: 700px;
+    max-width: 900px;
     margin: 0 auto;
-    padding-left: 0;
+    padding: 0;
 }
 
 .experience-timeline-vertical::before {
     content: '';
     position: absolute;
-    left: 161px; /* 130px (date width) + 24px (padding) + 7px (half marker width) */
-    top: 20px;
-    bottom: 20px;
-    width: 2px;
-    background-color: var(--color-border);
+    left: 150px;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: var(--color-border);
     z-index: 1;
 }
 
 .timeline-item-vertical {
     position: relative;
     display: flex;
-    align-items: center;
-    margin-bottom: var(--spacing-xl);
-    padding-bottom: var(--spacing-md);
+    align-items: flex-start;
+    margin-bottom: 3rem;
+    padding: 0;
 }
 
 .timeline-item-vertical:last-child {
     margin-bottom: 0;
 }
 
-.timeline-date-left {
-    width: 130px;
-    text-align: right;
-    padding-right: 24px; /* Exact spacing to marker */
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--color-text);
-    font-family: var(--font-family-mono);
-    flex-shrink: 0;
-    line-height: 1;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    height: 14px; /* Match marker height */
+.timeline-item-vertical::before {
+    content: '';
+    position: absolute;
+    left: 146px;
+    top: 0.5rem;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--bs-primary);
+    z-index: 2;
 }
 
-.timeline-marker {
-    position: relative;
-    width: 14px;
-    height: 14px;
-    background-color: var(--bs-primary);
-    border-radius: 50%;
-    margin: 0;
-    z-index: 2;
+.timeline-date-left {
+    width: 130px;
     flex-shrink: 0;
-    box-shadow: 0 0 0 4px var(--color-bg-subtle);
+    text-align: right;
+    padding-right: 2rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--color-text-muted);
+    font-family: var(--font-family-mono);
+    line-height: 1.2;
+    padding-top: 0.25rem;
 }
 
 .timeline-content-right {
     flex: 1;
-    padding-left: var(--spacing-md);
+    padding-left: 2rem;
+    border: none;
+    background: none;
+    box-shadow: none;
     padding-top: 0;
+}
+
+.timeline-content-right:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+.timeline-marker {
+    display: none;
 }
 
 .company-name {
@@ -978,27 +987,25 @@ section {
     .experience-timeline-vertical::before {
         left: 20px;
     }
-    
+
     .timeline-item-vertical {
         flex-direction: column;
         align-items: flex-start;
-        margin-left: 40px;
+        padding-left: 3rem;
     }
-    
+
+    .timeline-item-vertical::before {
+        left: 16px;
+    }
+
     .timeline-date-left {
         width: auto;
         text-align: left;
         padding-right: 0;
-        padding-bottom: 0.5rem;
-        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+        font-size: 0.75rem;
     }
-    
-    .timeline-marker {
-        position: absolute;
-        left: -32px;
-        margin: 0;
-    }
-    
+
     .timeline-content-right {
         padding-left: 0;
     }
@@ -1081,6 +1088,17 @@ section {
     to {
         opacity: 1;
         transform: translateX(0);
+    }
+}
+
+@keyframes fadeInTimeline {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 

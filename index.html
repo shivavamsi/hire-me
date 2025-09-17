@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professional portfolio of Vamsi - Full Stack Developer with 7+ years experience in B2B applications, microservices, and cloud optimization">
-    <meta name="keywords" content="full stack developer, microservices, cloud, AWS, Azure, B2B applications">
-    <meta name="author" content="Vamsi">
+    <meta name="description"
+          content="Professional portfolio of Shiva Vamsi Gudivada - Senior Software Engineer with 8+ years experience in scalable cloud and enterprise systems">
+    <meta name="keywords"
+          content="senior software engineer, microservices, cloud, AWS, Azure, Java, Go, Spring Boot, Kafka">
+    <meta name="author" content="Shiva Vamsi Gudivada">
 
-    <title>Vamsi - Full Stack Developer Portfolio</title>
+    <title>Shiva Vamsi Gudivada | Software Engineer</title>
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -20,310 +22,360 @@
     <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
 </head>
 <body>
-    <!-- Skip to main content for accessibility -->
-    <a class="visually-hidden-focusable" href="#main-content">Skip to main content</a>
+<style>
+    :root {
+        /* Typography */
+        --font-family-sans-serif: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        --font-family-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+        --font-size-base: 1.125rem;
+        --line-height-base: 1.6;
 
-    <!-- Theme toggle in corner -->
-    <div class="theme-toggle-container fixed-top">
-        <button type="button" class="theme-toggle-compact" id="theme-toggle" title="Toggle theme" aria-label="Toggle theme">
-            <i class="bi bi-sun-fill" id="theme-icon"></i>
-        </button>
-    </div>
+        /* Colors - Light Mode */
+        --bs-primary: #2563eb;
+        --bs-primary-rgb: 37, 99, 235;
+        --bs-secondary: #64748b;
+        --bs-success: #10b981;
+        --bs-info: #0ea5e9;
+        --bs-warning: #f59e0b;
+        --bs-danger: #ef4444;
+        --bs-light: #f8fafc;
+        --bs-dark: #0f172a;
 
+        /* Custom colors */
+        --color-text: #1e293b;
+        --color-text-muted: #64748b;
+        --color-bg: #ffffff;
+        --color-bg-subtle: #f8fafc;
+        --color-border: #e2e8f0;
 
-    <!-- Main Content -->
-    <main id="main-content">
-        <!-- Hero Section -->
-        <section id="home" class="hero-section min-vh-100 d-flex align-items-center">
-            <div class="container">
-                <div class="row align-items-center">
-                    <!-- Left Section - Hero Content (65%) -->
-                    <div class="col-lg-8">
-                        <div class="hero-content text-center text-lg-start">
-                            <h1 class="hero-title display-2 fw-light mb-4">
-                                Hi, I'm <span class="text-primary">Vamsi</span>
-                            </h1>
-                            <p class="hero-subtitle lead mb-4">
-                                Senior Full Stack Developer &amp; Cloud Architect
-                            </p>
-                            <p class="hero-description text-muted mb-4">
-                                Specializing in B2B applications, microservices architecture, and cloud optimization with 7+ years of experience
-                            </p>
-                            
-                            <!-- Contact Icons -->
-                            <div class="contact-icons d-flex gap-3 justify-content-center justify-content-lg-start mb-4">
-                                <a href="mailto:vamsi.gudivada@gmail.com" class="contact-icon-link text-decoration-none" title="Email">
-                                    <i class="bi bi-envelope-fill text-primary fs-4"></i>
-                                </a>
-                                <a href="#" class="contact-icon-link text-decoration-none" title="LinkedIn" target="_blank" rel="noopener">
-                                    <i class="bi bi-linkedin text-primary fs-4"></i>
-                                </a>
-                                <a href="#" class="contact-icon-link text-decoration-none" title="GitHub" target="_blank" rel="noopener">
-                                    <i class="bi bi-github text-primary fs-4"></i>
-                                </a>
-                                <a href="#" class="contact-icon-link text-decoration-none" title="Instagram" target="_blank" rel="noopener">
-                                    <i class="bi bi-instagram text-primary fs-4"></i>
-                                </a>
-                                <a href="#" class="contact-icon-link text-decoration-none" title="YouTube" target="_blank" rel="noopener">
-                                    <i class="bi bi-youtube text-primary fs-4"></i>
-                                </a>
-                            </div>
-                            
-                            <div class="hero-actions d-flex gap-3 justify-content-center justify-content-lg-start">
-                                <a href="resources/GudivadaMEResume.pdf" class="btn btn-apple btn-apple-primary" download>
-                                    <i class="bi bi-download me-2"></i>Resume
-                                </a>
-                                <a href="mailto:vamsi.gudivada@gmail.com" class="btn btn-apple btn-apple-secondary">
-                                    <i class="bi bi-chat-dots me-2"></i>Let's Talk
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Right Section - Skills (35%) -->
-                    <div class="col-lg-4">
-                        <div class="skills-section-home d-none d-lg-block">
-                            <h3 class="skills-home-title h5 mb-4 text-primary">Tech Stack</h3>
-                            <div class="skills-categories">
-                                <div class="skill-category-compact mb-3">
-                                    <h4 class="skill-category-title-small text-muted mb-2">
-                                        <i class="bi bi-arrow-right skill-arrow-icon"></i>Languages
-                                    </h4>
-                                    <div class="skills-list">
-                                        <span class="skill-tag-compact">Java</span>
-                                        <span class="skill-tag-compact">JavaScript</span>
-                                        <span class="skill-tag-compact">SQL</span>
-                                    </div>
-                                </div>
-                                <div class="skill-category-compact mb-3">
-                                    <h4 class="skill-category-title-small text-muted mb-2">
-                                        <i class="bi bi-arrow-right skill-arrow-icon"></i>Cloud & DevOps
-                                    </h4>
-                                    <div class="skills-list">
-                                        <span class="skill-tag-compact">AWS</span>
-                                        <span class="skill-tag-compact">Azure</span>
-                                        <span class="skill-tag-compact">Docker</span>
-                                    </div>
-                                </div>
-                                <div class="skill-category-compact mb-3">
-                                    <h4 class="skill-category-title-small text-muted mb-2">
-                                        <i class="bi bi-arrow-right skill-arrow-icon"></i>Frameworks
-                                    </h4>
-                                    <div class="skills-list">
-                                        <span class="skill-tag-compact">Spring</span>
-                                        <span class="skill-tag-compact">Node.js</span>
-                                        <span class="skill-tag-compact">Vue.js</span>
-                                    </div>
-                                </div>
-                                <div class="skill-category-compact mb-3">
-                                    <h4 class="skill-category-title-small text-muted mb-2">
-                                        <i class="bi bi-arrow-right skill-arrow-icon"></i>Databases
-                                    </h4>
-                                    <div class="skills-list">
-                                        <span class="skill-tag-compact">Oracle</span>
-                                        <span class="skill-tag-compact">MongoDB</span>
-                                        <span class="skill-tag-compact">DynamoDB</span>
-                                    </div>
-                                </div>
-                                <div class="skill-category-compact">
-                                    <h4 class="skill-category-title-small text-muted mb-2">
-                                        <i class="bi bi-arrow-right skill-arrow-icon"></i>Architecture
-                                    </h4>
-                                    <div class="skills-list">
-                                        <span class="skill-tag-compact">Microservices</span>
-                                        <span class="skill-tag-compact">REST APIs</span>
-                                        <span class="skill-tag-compact">Kafka</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        /* Spacing */
+        --spacing-xs: 0.5rem;
+        --spacing-sm: 1rem;
+        --spacing-md: 1.5rem;
+        --spacing-lg: 2rem;
+        --spacing-xl: 3rem;
+
+        /* Borders */
+        --border-radius: 0.5rem;
+        --border-radius-sm: 0.25rem;
+        --border-radius-lg: 1rem;
+
+        /* Shadows */
+        --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+        --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+
+        /* Transitions */
+        --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+        --transition-normal: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+
+        /* Timeline layout variables */
+        --timeline-date-width: 130px; /* controls the date column width */
+        --timeline-gap: 24px; /* space between date and marker */
+        --timeline-marker-size: 14px; /* dot size */
+        --timeline-line-width: 2px; /* vertical line thickness */
+    }
+
+    /* Dark Mode */
+    [data-bs-theme='dark'] {
+        --color-text: #f0f6fc;
+        --color-text-muted: #b1bac4;
+        --color-bg: #0d1117;
+        --color-bg-subtle: #161b22;
+        --color-border: #30363d;
+        --bs-primary: #4a9eff;
+        --bs-primary-rgb: 74, 158, 255;
+
+        --bs-body-color: var(--color-text);
+        --bs-body-bg: var(--color-bg);
+        --bs-border-color: var(--color-border);
+    }
+</style>
+<!-- Skip to main content for accessibility -->
+<a class="visually-hidden-focusable" href="#main-content">Skip to main content</a>
+
+<!-- Theme toggle in corner -->
+<div class="theme-toggle-container fixed-top">
+    <button type="button" class="theme-toggle-compact" id="theme-toggle" title="Toggle theme" aria-label="Toggle theme">
+        <i class="bi bi-sun-fill" id="theme-icon"></i>
+    </button>
+</div>
 
 
-        <!-- About Section -->
-        <section id="about" class="about-section py-5">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-10 mx-auto">
-                    </div>
-                </div>
-            </div>
-        </section>
+<!-- Main Content -->
+<main id="main-content">
+    <!-- Hero Section -->
+    <section id="home" class="hero-section min-vh-100 d-flex align-items-center">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Left Section - Hero Content (65%) -->
+                <div class="col-lg-8">
+                    <div class="hero-content text-center text-lg-start">
+                        <h1 class="hero-title display-2 fw-light mb-4">
+                            Hi, I'm <span class="text-primary">Shiva Gudivada</span>
+                        </h1>
+                        <p class="hero-subtitle lead mb-4">
+                            Software Engineer
+                        </p>
+                        <p class="hero-description text-muted mb-4">
+                            8+ years of experience leading design, development, and deployment of
+                            scalable cloud and enterprise systems.
+                        </p>
 
-        <!-- Experience Section -->
-        <section id="experience" class="experience-section py-5">
-            <div class="container">
-                <div class="row align-items-start">
-                    <!-- Left Section - Career Timeline (65%) -->
-                    <div class="col-lg-8">
-                        <div class="text-center text-lg-start mb-5">
-                            <h2 class="section-title h3 mb-4">
-                                <span class="text-primary">$</span> history --career
-                            </h2>
+                        <!-- Contact Icons -->
+                        <div class="contact-icons d-flex gap-3 justify-content-center justify-content-lg-start mb-4">
+                            <a href="mailto:shivavamsi.gudivada@gmail.com"
+                               class="contact-icon-link text-decoration-none" title="Email">
+                                <i class="bi bi-envelope-fill text-primary fs-4"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/shivavamsi"
+                               class="contact-icon-link text-decoration-none" title="LinkedIn" target="_blank"
+                               rel="noopener">
+                                <i class="bi bi-linkedin text-primary fs-4"></i>
+                            </a>
+                            <a href="https://github.com/shivavamsi" class="contact-icon-link text-decoration-none"
+                               title="GitHub" target="_blank" rel="noopener">
+                                <i class="bi bi-github text-primary fs-4"></i>
+                            </a>
+                            <a href="https://www.instagram.com/shivas.perspective"
+                               class="contact-icon-link text-decoration-none" title="Instagram" target="_blank"
+                               rel="noopener">
+                                <i class="bi bi-instagram text-primary fs-4"></i>
+                            </a>
+                            <a href="https://www.youtube.com/@kratoesgaming2079/playlists"
+                               class="contact-icon-link text-decoration-none" title="YouTube" target="_blank"
+                               rel="noopener">
+                                <i class="bi bi-youtube text-primary fs-4"></i>
+                            </a>
                         </div>
 
-                        <!-- Experience Timeline -->
-                        <div class="experience-timeline-vertical">
-                            <div class="timeline-item-vertical">
-                                <div class="timeline-date-left">2019 - Present</div>
-                                <div class="timeline-marker"></div>
-                                <div class="timeline-content-right">
-                                    <h3 class="company-name">Gap Inc</h3>
-                                    <div class="position-title text-muted">(Senior Full Stack Developer)</div>
-                                    <p class="position-description text-muted">
-                                        Led enterprise retail solutions development, architected microservices for global e-commerce platform serving millions of users.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="timeline-item-vertical">
-                                <div class="timeline-date-left">2017 - 2019</div>
-                                <div class="timeline-marker"></div>
-                                <div class="timeline-content-right">
-                                    <h3 class="company-name">g2o</h3>
-                                    <div class="position-title text-muted">(Full Stack Developer)</div>
-                                    <p class="position-description text-muted">
-                                        Developed scalable B2B applications and integration platforms, optimized cloud infrastructure for cost efficiency.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="timeline-item-vertical">
-                                <div class="timeline-date-left">2016 - 2017</div>
-                                <div class="timeline-marker"></div>
-                                <div class="timeline-content-right">
-                                    <h3 class="company-name">American Smart Lending</h3>
-                                    <div class="position-title text-muted">(Software Developer)</div>
-                                    <p class="position-description text-muted">
-                                        Built financial technology solutions, implemented secure payment processing and compliance systems.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Right Section - Skills (35%) -->
-                    <div class="col-lg-4">
-                        <div class="skills-section-career d-none d-lg-block">
-                            <h3 class="skills-career-title h5 mb-4 text-primary">Technical Skills</h3>
-                            <div class="skills-grid-compact">
-                                <div class="row g-3">
-                                    <div class="col-12">
-                                        <div class="skill-category-compact">
-                                            <h4 class="skill-category-title-small text-muted mb-2">
-                                                <i class="bi bi-code-slash text-primary skill-icon-inline"></i>
-                                                Programming
-                                            </h4>
-                                            <div class="skills-list-compact">
-                                                <span class="skill-tag-compact">Java</span>
-                                                <span class="skill-tag-compact">JavaScript</span>
-                                                <span class="skill-tag-compact">SQL</span>
-                                                <span class="skill-tag-compact">JRuby</span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-12">
-                                        <div class="skill-category-compact">
-                                            <h4 class="skill-category-title-small text-muted mb-2">
-                                                <i class="bi bi-layers text-success skill-icon-inline"></i>
-                                                Frameworks
-                                            </h4>
-                                            <div class="skills-list-compact">
-                                                <span class="skill-tag-compact">Spring</span>
-                                                <span class="skill-tag-compact">Vue.js</span>
-                                                <span class="skill-tag-compact">Node.js</span>
-                                                <span class="skill-tag-compact">Hibernate</span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-12">
-                                        <div class="skill-category-compact">
-                                            <h4 class="skill-category-title-small text-muted mb-2">
-                                                <i class="bi bi-cloud text-info skill-icon-inline"></i>
-                                                Cloud & DevOps
-                                            </h4>
-                                            <div class="skills-list-compact">
-                                                <span class="skill-tag-compact">AWS</span>
-                                                <span class="skill-tag-compact">Azure</span>
-                                                <span class="skill-tag-compact">Docker</span>
-                                                <span class="skill-tag-compact">Jenkins</span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-12">
-                                        <div class="skill-category-compact">
-                                            <h4 class="skill-category-title-small text-muted mb-2">
-                                                <i class="bi bi-database text-warning skill-icon-inline"></i>
-                                                Databases
-                                            </h4>
-                                            <div class="skills-list-compact">
-                                                <span class="skill-tag-compact">Oracle</span>
-                                                <span class="skill-tag-compact">MongoDB</span>
-                                                <span class="skill-tag-compact">DynamoDB</span>
-                                                <span class="skill-tag-compact">MySQL</span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-12">
-                                        <div class="skill-category-compact">
-                                            <h4 class="skill-category-title-small text-muted mb-2">
-                                                <i class="bi bi-arrow-repeat text-success skill-icon-inline"></i>
-                                                Integration
-                                            </h4>
-                                            <div class="skills-list-compact">
-                                                <span class="skill-tag-compact">Kafka</span>
-                                                <span class="skill-tag-compact">REST APIs</span>
-                                                <span class="skill-tag-compact">IBM MQ</span>
-                                                <span class="skill-tag-compact">Apache Camel</span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-12">
-                                        <div class="skill-category-compact">
-                                            <h4 class="skill-category-title-small text-muted mb-2">
-                                                <i class="bi bi-activity text-warning skill-icon-inline"></i>
-                                                Monitoring
-                                            </h4>
-                                            <div class="skills-list-compact">
-                                                <span class="skill-tag-compact">Splunk</span>
-                                                <span class="skill-tag-compact">New Relic</span>
-                                                <span class="skill-tag-compact">CloudWatch</span>
-                                                <span class="skill-tag-compact">Graphite</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
+
             </div>
-        </section>
+        </div>
+    </section>
 
-    </main>
 
-    <!-- Footer -->
-    <footer class="py-2 border-top">
+    <!-- About Section -->
+    <section id="about" class="about-section py-5">
         <div class="container">
             <div class="row">
-                <div class="col-12 text-center">
-                    <p class="text-muted small mb-0">© <span id="current-year"></span> Vamsi</p>
+                <div class="col-lg-10 mx-auto">
                 </div>
             </div>
         </div>
-    </footer>
+    </section>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom JS -->
-    <script type="module" src="src/js/main.js"></script>
+    <!-- Experience Section -->
+    <section id="experience" class="experience-section py-5">
+        <div class="container">
+            <div class="row align-items-start">
+                <!-- Left Section - Career Timeline (65%) -->
+                <div class="col-lg-8">
+                    <div class="text-center text-lg-start mb-5">
+                        <h2 class="section-title h3 mb-4">
+                            <span class="text-primary">$</span> history --career
+                        </h2>
+                    </div>
+
+                    <!-- Experience Timeline -->
+                    <div class="experience-timeline-vertical">
+                        <div class="timeline-item-vertical">
+                            <div class="timeline-date-left">Jun 2023</div>
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content-right">
+                                <h3 class="company-name">Compunnel Software Group Inc</h3>
+                                <div class="position-title text-muted">Senior Software Engineer</div>
+                                <p class="position-description text-muted">
+                                    Led a team of 6 developers at a FinTech client, developed cloud-native applications
+                                    with Go, Cassandra, AWS, and Docker, improving system scalability and fault
+                                    tolerance.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item-vertical">
+                            <div class="timeline-date-left">Oct 2022</div>
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content-right">
+                                <h3 class="company-name">The Gap Inc</h3>
+                                <div class="position-title text-muted">Senior Software Engineer</div>
+                                <p class="position-description text-muted">
+                                    Reduced Azure cloud costs by 25% through optimized resource utilization, built
+                                    high-performance Kafka-based applications handling 100k+ events per hour.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item-vertical">
+                            <div class="timeline-date-left">Jul 2019</div>
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content-right">
+                                <h3 class="company-name">g2o [Client: The Gap Inc]</h3>
+                                <div class="position-title text-muted">Software Engineer</div>
+                                <p class="position-description text-muted">
+                                    Designed and implemented microservices using Spring Boot, Kafka, Azure Event Hubs,
+                                    and IBM MQ for high-volume, fault-tolerant systems.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item-vertical">
+                            <div class="timeline-date-left">Aug 2018</div>
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content-right">
+                                <h3 class="company-name">American Smart Lending Group</h3>
+                                <div class="position-title text-muted">Software Engineer</div>
+                                <p class="position-description text-muted">
+                                    Built an online mortgage portal increasing applications by 10x, developed Vue.js
+                                    Single-Page Application and integrated AWS services.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item-vertical">
+                            <div class="timeline-date-left">Jul 2015</div>
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content-right">
+                                <h3 class="company-name">Tata Consultancy Services</h3>
+                                <div class="position-title text-muted">Assistant Systems Engineer</div>
+                                <p class="position-description text-muted">
+                                    Automated Windows Batch tasks reducing manual effort by 75%, developed Java web
+                                    applications for driver classification using k-NN.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Section - Skills (35%) -->
+                <div class="col-lg-4">
+                    <div class="skills-section-career d-none d-lg-block">
+                        <h3 class="skills-career-title h5 mb-4 text-primary">Technical Skills</h3>
+                        <div class="skills-grid-compact">
+                            <div class="row g-3">
+                                <div class="col-12">
+                                    <div class="skill-category-compact">
+                                        <h4 class="skill-category-title-small text-muted mb-2">
+                                            <i class="bi bi-code-slash text-primary skill-icon-inline"></i>
+                                            Programming
+                                        </h4>
+                                        <div class="skills-list-compact">
+                                            <span class="skill-tag-compact">Java</span>
+                                            <span class="skill-tag-compact">Go</span>
+                                            <span class="skill-tag-compact">JavaScript</span>
+                                            <span class="skill-tag-compact">SQL</span>
+                                            <span class="skill-tag-compact">JRuby</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="skill-category-compact">
+                                        <h4 class="skill-category-title-small text-muted mb-2">
+                                            <i class="bi bi-layers text-success skill-icon-inline"></i>
+                                            Frameworks
+                                        </h4>
+                                        <div class="skills-list-compact">
+                                            <span class="skill-tag-compact">Spring Boot</span>
+                                            <span class="skill-tag-compact">Spring</span>
+                                            <span class="skill-tag-compact">Hibernate</span>
+                                            <span class="skill-tag-compact">Apache Camel</span>
+                                            <span class="skill-tag-compact">Node.js</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="skill-category-compact">
+                                        <h4 class="skill-category-title-small text-muted mb-2">
+                                            <i class="bi bi-cloud text-info skill-icon-inline"></i>
+                                            Cloud & DevOps
+                                        </h4>
+                                        <div class="skills-list-compact">
+                                            <span class="skill-tag-compact">AWS</span>
+                                            <span class="skill-tag-compact">Azure</span>
+                                            <span class="skill-tag-compact">Docker</span>
+                                            <span class="skill-tag-compact">Jenkins</span>
+                                            <span class="skill-tag-compact">HashiCorp Vault</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="skill-category-compact">
+                                        <h4 class="skill-category-title-small text-muted mb-2">
+                                            <i class="bi bi-database text-warning skill-icon-inline"></i>
+                                            Databases
+                                        </h4>
+                                        <div class="skills-list-compact">
+                                            <span class="skill-tag-compact">Oracle</span>
+                                            <span class="skill-tag-compact">MySQL</span>
+                                            <span class="skill-tag-compact">Cassandra</span>
+                                            <span class="skill-tag-compact">DynamoDB</span>
+                                            <span class="skill-tag-compact">Cosmos DB</span>
+                                            <span class="skill-tag-compact">MongoDB</span>
+                                            <span class="skill-tag-compact">Yugabyte</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="skill-category-compact">
+                                        <h4 class="skill-category-title-small text-muted mb-2">
+                                            <i class="bi bi-arrow-repeat text-success skill-icon-inline"></i>
+                                            Integration
+                                        </h4>
+                                        <div class="skills-list-compact">
+                                            <span class="skill-tag-compact">Kafka</span>
+                                            <span class="skill-tag-compact">Confluent Kafka</span>
+                                            <span class="skill-tag-compact">Apache Avro</span>
+                                            <span class="skill-tag-compact">NATS</span>
+                                            <span class="skill-tag-compact">IBM MQ</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="skill-category-compact">
+                                        <h4 class="skill-category-title-small text-muted mb-2">
+                                            <i class="bi bi-activity text-warning skill-icon-inline"></i>
+                                            Monitoring
+                                        </h4>
+                                        <div class="skills-list-compact">
+                                            <span class="skill-tag-compact">Splunk</span>
+                                            <span class="skill-tag-compact">New Relic</span>
+                                            <span class="skill-tag-compact">CloudWatch</span>
+                                            <span class="skill-tag-compact">Datadog</span>
+                                            <span class="skill-tag-compact">Graphite</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="py-2 border-top">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <p class="text-muted small mb-0">© <span id="current-year"></span> Shiva Vamsi Gudivada</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Custom JS -->
+<script type="module" src="src/js/main.js"></script>
 </body>
 </html>
