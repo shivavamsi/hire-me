@@ -249,9 +249,23 @@ body {
 
 .skills-list-vertical {
     display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    justify-content: center;
+    flex-direction: column;
+    gap: 0.4rem;
+    align-items: flex-start;
+}
+
+.skills-list-vertical div {
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: var(--color-text-muted);
+    transition: all var(--transition-fast);
+    line-height: 1.2;
+    padding: 0.1rem 0;
+}
+
+.skills-list-vertical div:hover {
+    color: var(--color-text);
+    transform: translateX(2px);
 }
 
 .skill-category {
@@ -311,7 +325,7 @@ body {
 /* Skills Section for Career */
 .skills-section-career {
     position: relative;
-    padding-left: var(--spacing-lg);
+    padding-left: var(--spacing-md);
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -332,7 +346,7 @@ body {
 .skills-section-career::before {
     content: '';
     position: absolute;
-    left: -2rem;
+    left: -1.5rem;
     top: 0;
     bottom: 0;
     width: 1px;
@@ -352,10 +366,10 @@ body {
 }
 
 .skill-category-compact {
-    margin-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
     transition: all var(--transition-fast);
     padding-left: 0;
-    padding-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-sm);
     position: relative;
 }
 
@@ -653,6 +667,7 @@ body {
 }
 
 .position-title {
+    font-style: italic;
     font-size: 1.125rem;
     font-weight: 400;
     margin-bottom: var(--spacing-sm);
