@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="auto">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+          content="Professional portfolio of Shiva Vamsi Gudivada - Senior Software Engineer with 8+ years experience in scalable cloud and enterprise systems">
+    <meta name="keywords"
+          content="senior software engineer, microservices, cloud, AWS, Azure, Java, Go, Spring Boot, Kafka">
+    <meta name="author" content="Shiva Vamsi Gudivada">
+
+    <title>Shiva Vamsi Gudivada | Software Engineer</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="src/css/styles.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
+</head>
+<body>
+<style>
+    :root {
+        /* Typography */
+        --font-family-sans-serif: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        --font-family-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+        --font-size-base: 1.125rem;
+        --line-height-base: 1.6;
+
+        /* Colors - Light Mode */
+        --bs-primary: #2563eb;
+        --bs-primary-rgb: 37, 99, 235;
+        --bs-secondary: #64748b;
+        --bs-success: #10b981;
+        --bs-info: #0ea5e9;
+        --bs-warning: #f59e0b;
+        --bs-danger: #ef4444;
+        --bs-light: #f8fafc;
+        --bs-dark: #0f172a;
+
+        /* Custom colors */
+        --color-text: #1e293b;
+        --color-text-muted: #64748b;
+        --color-bg: #ffffff;
+        --color-bg-subtle: #f8fafc;
+        --color-border: #e2e8f0;
+
+        /* Spacing */
+        --spacing-xs: 0.5rem;
+        --spacing-sm: 1rem;
+        --spacing-md: 1.5rem;
+        --spacing-lg: 2rem;
+        --spacing-xl: 3rem;
+
+        /* Borders */
+        --border-radius: 0.5rem;
+        --border-radius-sm: 0.25rem;
+        --border-radius-lg: 1rem;
+
+        /* Shadows */
+        --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+        --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+
+        /* Transitions */
+        --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+        --transition-normal: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+
+        /* Timeline layout variables */
+        --timeline-date-width: 130px; /* controls the date column width */
+        --timeline-gap: 24px; /* space between date and marker */
+        --timeline-marker-size: 14px; /* dot size */
+        --timeline-line-width: 2px; /* vertical line thickness */
+    }
+
+    /* Dark Mode */
+    [data-bs-theme='dark'] {
+        --color-text: #f0f6fc;
+        --color-text-muted: #b1bac4;
+        --color-bg: #0d1117;
+        --color-bg-subtle: #161b22;
+        --color-border: #30363d;
+        --bs-primary: #4a9eff;
+        --bs-primary-rgb: 74, 158, 255;
+
+        --bs-body-color: var(--color-text);
+        --bs-body-bg: var(--color-bg);
+        --bs-border-color: var(--color-border);
+    }
+</style>
+<!-- Skip to main content for accessibility -->
+<a class="visually-hidden-focusable" href="#main-content">Skip to main content</a>
+
+<!-- Theme toggle in corner -->
+<div class="theme-toggle-container fixed-top">
+    <button type="button" class="theme-toggle-compact" id="theme-toggle" title="Toggle theme" aria-label="Toggle theme">
+        <i class="bi bi-sun-fill" id="theme-icon"></i>
+    </button>
+</div>
+
+
+<!-- Main Content -->
+<main id="main-content">
+    <!-- Hero Section -->
+    <section id="home" class="hero-section min-vh-100 d-flex align-items-center">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Left Section - Hero Content (65%) -->
+                <div class="col-lg-8">
+                    <div class="hero-content text-center text-lg-start">
+                        <h1 class="hero-title display-2 fw-light mb-4">
+                            Hi, I'm <span class="text-primary">Shiva Gudivada</span>
+                        </h1>
+                        <p class="hero-subtitle lead mb-4">
+                            Senior Software Engineer | Cloud & Distributed Systems
+                        </p>
+                        <p class="hero-description text-muted mb-4">
+                            8+ years of experience building scalable, cloud-native systems in AWS and
+                            Azure. Skilled in Java, Go, Spring Boot, Kafka, Redis, and distributed systems
+                            design.
+                        </p>
+
+                        <!-- Contact Icons -->
+                        <div class="contact-icons d-flex gap-3 justify-content-center justify-content-lg-start mb-4">
+                            <a href="mailto:shivavamsi.gudivada@gmail.com"
+                               class="contact-icon-link text-decoration-none" title="Email">
+                                <i class="bi bi-envelope-fill text-primary fs-4"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/shivavamsi"
+                               class="contact-icon-link text-decoration-none" title="LinkedIn" target="_blank"
+                               rel="noopener">
+                                <i class="bi bi-linkedin text-primary fs-4"></i>
+                            </a>
+                            <a href="https://github.com/shivavamsi" class="contact-icon-link text-decoration-none"
+                               title="GitHub" target="_blank" rel="noopener">
+                                <i class="bi bi-github text-primary fs-4"></i>
+                            </a>
+                            <a href="https://www.instagram.com/shivas.perspective"
+                               class="contact-icon-link text-decoration-none" title="Instagram" target="_blank"
+                               rel="noopener">
+                                <i class="bi bi-instagram text-primary fs-4"></i>
+                            </a>
+                            <a href="https://www.youtube.com/@kratoesgaming2079/playlists"
+                               class="contact-icon-link text-decoration-none" title="YouTube" target="_blank"
+                               rel="noopener">
+                                <i class="bi bi-youtube text-primary fs-4"></i>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Experience & Education Section -->
+    <section id="experience" class="experience-section py-5">
+        <div class="container">
+            <div class="row align-items-start">
+                <!-- Left Section - Career Timeline (75%) -->
+                <div class="col-lg-9">
+                    <div class="text-center text-lg-start mb-5">
+                        <h2 class="section-title h3 mb-4">
+                            Experience & Education
+                        </h2>
+                    </div>
+
+                    <!-- Combined Timeline -->
+                    <div class="experience-timeline-vertical">
+                        <!-- Experience -->
+                        <div class="timeline-item-vertical">
+                            <div class="timeline-date-left">2023</div>
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content-right">
+                                <h3 class="company-name">Compunnel</h3>
+                                <div class="position-title text-muted">Senior Software Engineer</div>
+                                <ul class="position-description text-muted">
+                                    <li>Scaled Cassandra databases, boosting throughput by 40%</li>
+                                    <li>Led a 6-member team, meeting all delivery timelines and improving code quality</li>
+                                    <li>Built Go/AWS cloud-native apps with touchless CI/CD, cutting deployment errors by 25%</li>
+                                    <li>Added monitoring & API security checks, reducing downtime and catching issues earlier</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item-vertical">
+                            <div class="timeline-date-left">2022 – 2023</div>
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content-right">
+                                <h3 class="company-name">The Gap Inc.</h3>
+                                <div class="position-title text-muted">Senior Software Engineer</div>
+                                <ul class="position-description text-muted">
+                                    <li>Reduced AWS cloud costs by 25% via smarter scaling and resource optimization</li>
+                                    <li>Built real-time Kafka app processing 100k+ events/hour, improving partner data sync</li>
+                                    <li>Automated test data tools, boosting QA efficiency by 35%</li>
+                                    <li>Improved microservices resilience, reducing production issues and increasing uptime</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item-vertical">
+                            <div class="timeline-date-left">2019 – 2022</div>
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content-right">
+                                <h3 class="company-name">g2o</h3>
+                                <div class="position-title text-muted">Software Engineer</div>
+                                <ul class="position-description text-muted">
+                                    <li>Delivered high-volume microservices with Spring Boot, Kafka, and Azure Event Hubs</li>
+                                    <li>Reduced failed event processing by 50% with Redis caching and reprocessing</li>
+                                    <li>Increased automated QA coverage by 40% through Cucumber integration</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item-vertical">
+                            <div class="timeline-date-left">2018 – 2019</div>
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content-right">
+                                <h3 class="company-name">American Smart Lending Group</h3>
+                                <div class="position-title text-muted">Software Engineer</div>
+                                <ul class="position-description text-muted">
+                                    <li>Built a mortgage portal with Vue.js & AWS, driving a 10x increase in applications</li>
+                                    <li>Deployed with blue/green strategies for zero-downtime releases</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Education -->
+                        <div class="timeline-item-vertical">
+                            <div class="timeline-date-left">2017 - 2019</div>
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content-right">
+                                <h3 class="company-name">Master of Engineering, Computer Science</h3>
+                                <div class="position-title text-muted">University of Cincinnati</div>
+                                <p class="position-description text-muted">
+                                    GPA: 3.8/4.0
+                                </p>
+                            </div>
+                        </div>
+
+
+                        <div class="timeline-item-vertical">
+                            <div class="timeline-date-left"> 2015 – 2017</div>
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content-right">
+                                <h3 class="company-name">Tata Consultancy Services</h3>
+                                <div class="position-title text-muted">Assistant Systems Engineer</div>
+                                <ul class="position-description text-muted">
+                                    <li>Automated processes that cut manual effort by 75%</li>
+                                    <li>Won "On the Spot" award for resolving a critical client issue quickly</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item-vertical">
+                            <div class="timeline-date-left">2011 - 2015</div>
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content-right">
+                                <h3 class="company-name">Bachelor of Technology, Electronics & Communication</h3>
+                                <div class="position-title text-muted">G.V.P. College of Engineering</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Section - Skills (25%) -->
+                <div class="col-lg-3">
+                    <div class="skills-section-career d-none d-lg-block">
+                        <h3 class="skills-career-title h5 mb-4 text-primary">Skills</h3>
+                        <div class="skills-grid-compact">
+                            <div class="row g-2">
+                                <div class="col-12">
+                                    <div class="skill-category-compact">
+                                        <h4 class="skill-category-title-small text-muted mb-2">
+                                            <i class="bi bi-cpu text-primary skill-icon-inline"></i>
+                                            Core Technologies
+                                        </h4>
+                                        <div class="skills-list-vertical">
+                                            <div class="ms-3">• Java</div>
+                                            <div class="ms-3">• Go</div>
+                                            <div class="ms-3">• SQL</div>
+                                            <div class="ms-3">• Spring Boot</div>
+                                            <div class="ms-3">• Node.js</div>
+                                            <div class="ms-3">• Microservices</div>
+                                            <div class="ms-3">• Distributed Systems</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="skill-category-compact">
+                                        <h4 class="skill-category-title-small text-muted mb-2">
+                                            <i class="bi bi-cloud-fill text-info skill-icon-inline"></i>
+                                            Cloud Platforms
+                                        </h4>
+                                        <div class="skills-list-vertical">
+                                            <div class="ms-3">• AWS (Lambda, S3, EC2, CI/CD)</div>
+                                            <div class="ms-3">• Azure (Event Hubs, Redis, Key Vault)</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="skill-category-compact">
+                                        <h4 class="skill-category-title-small text-muted mb-2">
+                                            <i class="bi bi-database-fill text-warning skill-icon-inline"></i>
+                                            Databases
+                                        </h4>
+                                        <div class="skills-list-vertical">
+                                            <div class="ms-3">• Oracle</div>
+                                            <div class="ms-3">• MySQL</div>
+                                            <div class="ms-3">• Apache Cassandra</div>
+                                            <div class="ms-3">• DynamoDB</div>
+                                            <div class="ms-3">• MongoDB</div>
+                                            <div class="ms-3">• Cosmos DB</div>
+                                            <div class="ms-3">• Yugabyte</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-12">
+                                    <div class="skill-category-compact">
+                                        <h4 class="skill-category-title-small text-muted mb-2">
+                                            <i class="bi bi-broadcast text-danger skill-icon-inline"></i>
+                                            Messaging & Streaming
+                                        </h4>
+                                        <div class="skills-list-vertical">
+                                            <div class="ms-3">• Kafka</div>
+                                            <div class="ms-3">• NATS</div>
+                                            <div class="ms-3">• IBM MQ</div>
+                                            <div class="ms-3">• JMS</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="skill-category-compact">
+                                        <h4 class="skill-category-title-small text-muted mb-2">
+                                            <i class="bi bi-tools text-success skill-icon-inline"></i>
+                                            DevOps & CI/CD
+                                        </h4>
+                                        <div class="skills-list-vertical">
+                                            <div class="ms-3">• Jenkins</div>
+                                            <div class="ms-3">• Docker</div>
+                                            <div class="ms-3">• Git</div>
+                                            <div class="ms-3">• Sonar</div>
+                                            <div class="ms-3">• Jacoco</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-12">
+                                    <div class="skill-category-compact">
+                                        <h4 class="skill-category-title-small text-muted mb-2">
+                                            <i class="bi bi-check-circle text-info skill-icon-inline"></i>
+                                            Testing & QA
+                                        </h4>
+                                        <div class="skills-list-vertical">
+                                            <div class="ms-3">• Cucumber</div>
+                                            <div class="ms-3">• JUnit</div>
+                                            <div class="ms-3">• Mockito</div>
+                                            <div class="ms-3">• PowerMock</div>
+                                            <div class="ms-3">• Mockery</div>
+                                            <div class="ms-3">• Apache JMeter</div>
+                                            <div class="ms-3">• Rushhour</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-12">
+                                    <div class="skill-category-compact">
+                                        <h4 class="skill-category-title-small text-muted mb-2">
+                                            <i class="bi bi-graph-up text-warning skill-icon-inline"></i>
+                                            Monitoring & Observability
+                                        </h4>
+                                        <div class="skills-list-vertical">
+                                            <div class="ms-3">• Splunk</div>
+                                            <div class="ms-3">• New Relic</div>
+                                            <div class="ms-3">• Datadog</div>
+                                            <div class="ms-3">• Amazon CloudWatch</div>
+                                            <div class="ms-3">• Graphite</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="py-2 border-top">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <p class="text-muted small mb-0">© <span id="current-year"></span> Shiva Vamsi Gudivada</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Custom JS -->
+<script type="module" src="src/js/main.js"></script>
+</body>
+</html>
