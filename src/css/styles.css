@@ -76,6 +76,46 @@ body {
         color var(--transition-normal);
 }
 
+/* Performance optimizations */
+* {
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+}
+
+/* Smooth scrolling optimization */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+}
+
+/* Reduce paint and layout thrashing */
+section {
+    contain: layout style paint;
+    will-change: auto;
+}
+
+/* Optimize elements that transform during scroll */
+.hero-section,
+.timeline-item-vertical,
+.skill-category-compact {
+    will-change: transform;
+    transform: translateZ(0); /* Force GPU acceleration */
+}
+
+/* Optimize hover effects to use GPU */
+.skill-category:hover,
+.project-card:hover,
+.btn:hover {
+    will-change: transform, box-shadow;
+}
+
+/* Remove will-change after animations complete */
+.skill-category:not(:hover),
+.project-card:not(:hover),
+.btn:not(:hover) {
+    will-change: auto;
+}
+
 /* Theme Toggle Styles */
 .theme-toggle-container {
     top: 1.5rem;
@@ -601,7 +641,7 @@ body {
     bottom: 0;
     width: 1px;
     background: var(--color-border);
-    z-index: 1;
+    z-index: 0;
 }
 
 .timeline-item-vertical {

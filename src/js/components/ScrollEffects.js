@@ -4,6 +4,7 @@ export class ScrollEffects {
         this.parallaxElements = [];
         this.observer = null;
         this.isReducedMotion = false;
+        this.lastScrollTop = 0;
     }
 
     async init() {
@@ -122,11 +123,16 @@ export class ScrollEffects {
 
         const scrollTop = window.pageYOffset;
 
+        // Only update if scroll position changed significantly
+        if (Math.abs(scrollTop - this.lastScrollTop) < 2) return;
+        this.lastScrollTop = scrollTop;
+
+        // Use passive transform with will-change for better performance
         requestAnimationFrame(() => {
             this.parallaxElements.forEach(item => {
                 const { element, speed } = item;
-                const yPos = scrollTop * speed;
-                element.style.transform = `translateY(${yPos}px)`;
+                const yPos = Math.round(scrollTop * speed * 100) / 100; // Round for subpixel rendering
+                element.style.transform = `translate3d(0, ${yPos}px, 0)`;
             });
         });
     }

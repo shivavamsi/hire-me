@@ -58,7 +58,19 @@ class PortfolioApp {
     }
 
     setupEventListeners() {
-        window.addEventListener('scroll', this.handleScroll.bind(this));
+        // Optimized scroll handling with passive listeners
+        let scrollTicking = false;
+
+        window.addEventListener('scroll', () => {
+            if (!scrollTicking) {
+                requestAnimationFrame(() => {
+                    this.handleScroll();
+                    scrollTicking = false;
+                });
+                scrollTicking = true;
+            }
+        }, { passive: true });
+
         window.addEventListener('resize', this.handleResize.bind(this));
 
         document.addEventListener('click', e => {
@@ -76,10 +88,7 @@ class PortfolioApp {
     }
 
     handleScroll() {
-        if (this.navigationManager) {
-            this.navigationManager.updateActiveNavigation();
-        }
-
+        // Batch scroll updates for better performance
         if (this.scrollEffects) {
             this.scrollEffects.handleScroll();
         }

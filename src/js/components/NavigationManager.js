@@ -4,6 +4,8 @@ export class NavigationManager {
     this.currentSection = null;
     this.scrollOffset = 100;
     this.throttleTimeout = null;
+    this.isScrolling = false;
+    this.lastScrollY = 0;
   }
 
   async init() {
@@ -19,16 +21,20 @@ export class NavigationManager {
   }
 
   setupEventListeners() {
-    // Scroll handling
-    window.addEventListener('scroll', () => {
-      if (this.throttleTimeout) {
-        clearTimeout(this.throttleTimeout);
-      }
+    // Improved scroll handling with requestAnimationFrame
+    let ticking = false;
 
-      this.throttleTimeout = setTimeout(() => {
-        this.updateActiveNavigation();
-      }, 16); // ~60fps
-    });
+    window.addEventListener('scroll', () => {
+      this.lastScrollY = window.pageYOffset;
+
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          this.updateActiveNavigation();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, { passive: true });
   }
 
   updateActiveNavigation() {
